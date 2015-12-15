@@ -18,7 +18,7 @@ How to Play:
 
 5)Once you guess all the letters, you will win.
 
-You only have 10 chances more than the word length. Example, if the word has 6 blanks, you have 11 tries to complete the word.
+You only have 5 chances more than the word length. Example, if the word has 6 blanks, you have 11 tries to complete the word.
 
 6)Good luck and have fun!
 
