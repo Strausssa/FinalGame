@@ -9,15 +9,16 @@ class Game
           dictionary << entry.to_s
         end
         number = Random.rand(1..dictionary.length)
-        puts
+        #Puts are used for spacing in the game
+        puts "Welcome to Hangman/Word Maker!"
         puts
         puts
         for i in 2..dictionary[number-1].length
             print "_ "
         end
-        $chances = dictionary[number-1].length + 3
+        $chances = dictionary[number-1].length + 4
         puts
-        puts
+        puts "Your Word Is^^"
         puts
         return dictionary[number-1]
     end
@@ -26,6 +27,7 @@ class Game
         str = ""
         amount = 0
         for i in 2..word.length
+            #Used for blanks of the word
             str += "_ "
         end
         for a in 1..word.length
@@ -36,7 +38,7 @@ class Game
                     if amount*2 == str.length
                         puts
                         puts
-                        puts "You won!"
+                        puts "You Won! Congrats!"
                         puts
                         print "The word was ", str, "!"
                         return "good"
@@ -52,13 +54,13 @@ class Game
     def guessLetters(word)
         puts "Guess some letters!"
         puts
-        print "You have ", ($chances - $chanceCount).to_s, " letters left."
+        print "You have ", ($chances - $chanceCount).to_s, " chances left."
         puts
         letter = gets.chomp
         if (!$guessedLetters.include? letter) && letter.length == 1
             if word[letter]
                 puts
-                print "Word contains ", letter
+                print "Word Contains: ", letter
                 puts
                 $guessedLetters << letter
                 print "Guessed Letters: "
@@ -71,7 +73,7 @@ class Game
                 else
                     if $chances == $chanceCount
                         puts
-                        puts "You ran out of turns!"
+                        puts "You Ran Out of Turns! YOU LOSE!"
                         puts
                         return
                     else
@@ -83,7 +85,7 @@ class Game
                 guessLetters(word)
             else
                 puts
-                print "Word does not contain ", letter
+                print "Word Does Not Contain: ", letter
                 puts
                 $guessedLetters << letter
                 print "Guessed Letters: "
@@ -96,7 +98,7 @@ class Game
                 else
                     if $chances == $chanceCount
                         puts
-                        puts "You ran out of turns!"
+                        puts "You Ran Out of Turns!"
                         puts
                         return
                     else
