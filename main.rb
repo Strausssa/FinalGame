@@ -1,8 +1,10 @@
 class Game
+	
     $guessedLetters = []
     $chances = 0
     $chanceCount = 0
-    def generate_word
+
+    def generate_word #This Was the First Problem
         dictionary_file = File.open("words.txt", "r")
         dictionary = []
         dictionary_file.each do |entry|
@@ -16,7 +18,7 @@ class Game
         for i in 2..dictionary[number-1].length
             print "_ "
         end
-        $chances = dictionary[number-1].length + 4
+        $chances = dictionary[number-1].length + 4 #Second Problem 4 is actually 5
         puts
         puts "Your Word Is^^"
         puts
