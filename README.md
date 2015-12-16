@@ -31,7 +31,7 @@ My Game is:
 
 1) Making it so it picks a random word which I solved through making a txt file with thousands apon thousands of words.
 
-2) Making it so a single letter can show up more than once in a word which was solved through...
+2) Making it so a single letter can show up more than once in a word which was solved through checking each letter in an array.
 
 3) Making it so there is a certain number of chances for the word.
 
