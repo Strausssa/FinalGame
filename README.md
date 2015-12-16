@@ -33,7 +33,7 @@ My Game is:
 
 2) Making it so a single letter can show up more than once in a word which was solved through checking each letter in an array.
 
-3) Making it so there is a certain number of chances for the word.
+3) Making it so there is a certain number of chances for the word which was made through given 5 chances plus the word length of the array.
 
 -Is easily changable with the fact you can change the number of chances per a word and the word list.
 
